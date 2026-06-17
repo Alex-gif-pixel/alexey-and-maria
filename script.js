@@ -25,11 +25,25 @@ function getGuestFromUrl() {
   return null;
 }
 
-function getDearGreeting(name) {
-  const lower = name.toLowerCase();
-  if (lower.includes('семья') || lower.includes(' и ')) {
+function getDearGreeting(guest) {
+  const name = guest.name;
+  const lowerName = name.toLowerCase();
+  
+  // 1. Проверка на семью или пару
+  if (lowerName.includes('семья') || lowerName.includes(' и ')) {
     return `Дорогие ${name}!`;
   }
+  
+  // 2. Проверка по ключу gender для одиночных гостей
+  if (guest.gender === 'female') {
+    return `Дорогая ${name}!`;
+  }
+  
+  if (guest.gender === 'male') {
+    return `Дорогой ${name}!`;
+  }
+  
+  // 3. Запасной вариант (если gender не указан)
   return `Дорогой(ая) ${name}!`;
 }
 
