@@ -82,10 +82,10 @@ function applyPersonalization() {
   if (count) {
     const guestsSelect = document.getElementById('guests');
     guestsSelect.value = String(Math.min(4, count));
-    if (count <= 4) {
-      guestsSelect.disabled = true;
+    /*if (count <= 4) {
+      /*guestsSelect.disabled = true;
       guestsSelect.classList.add('input--readonly');
-    }
+    }*/
   }
 
   return guest;
