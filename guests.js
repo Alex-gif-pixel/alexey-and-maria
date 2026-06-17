@@ -7,11 +7,15 @@ const GUEST_LIST = {
   bachurin: { name: 'Бачурин Александр', count: 1, gender: 'male' },
   bannikov: { name: 'Банников Андрей', count: 1, gender: 'male' },
   arhipov: { name: 'Архипов Иван', count: 1, gender: 'male' },
-  pashkov: { name: 'Пашков Кирилл', count: 1, gender: 'male'},
+  pashkov: { name: 'Пашков Кирилл', count: 1, gender: 'male' },
   koltsov: { name: 'Кольцов Артём', count: 1, gender: 'male' },
   chunihin: { name: 'Чунихин Сергей', count: 1, gender: 'male' },
-  perov_novikova: { name: 'Перов Максим и Новикова Елизавета', count: 2 },
+  perov_novikova: { name: 'Максим и Елизавета', count: 2 },
   kiseleva_kiselev: { name: 'Артур и Татьяна Киселёвы', count: 2 },
   skryabiny: { name: 'Иван и Дарья Скрябины', count: 2 },
-  skorohodovy: { name: 'Илья и Елизавета Скороходовы', count: 2 }
+  skorohodovy: { name: 'Илья и Елизавета Скороходовы', count: 2 },
+  krivtsov: { name: 'Кривцов Николай', count: 1, gender: 'male' },
+  elima: { name: 'Элима', count: 1, gender: 'female' },
+  iman: { name: 'Иман', count: 1, gender: 'female' },
+  shulgin_titova: {name: 'Александр и Полина', count: 2 }
 };
