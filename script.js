@@ -12,6 +12,7 @@ function getGuestFromUrl() {
     return {
       name: GUEST_LIST[id].name,
       count: GUEST_LIST[id].count,
+      gender: GUEST_LIST[id].gender,
     };
   }
 
@@ -19,22 +20,21 @@ function getGuestFromUrl() {
     return {
       name: decodeURIComponent(directName.replace(/\+/g, ' ')).trim(),
       count: directCount ? Math.min(4, Math.max(1, parseInt(directCount, 10) || 1)) : null,
+      gender: null,
     };
   }
 
   return null;
 }
 
+// ИСПРАВЛЕНО: Теперь функция принимает весь объект гостя (guest)
 function getDearGreeting(guest) {
   const name = guest.name;
-  const lowerName = name.toLowerCase();
+  const lower = name.toLowerCase();
   
-  // 1. Проверка на семью или пару
-  if (lowerName.includes('семья') || lowerName.includes(' и ')) {
+  if (lower.includes('семья') || lower.includes(' и ')) {
     return `Дорогие ${name}!`;
   }
-  
-  // 2. Проверка по ключу gender для одиночных гостей
   if (guest.gender === 'female') {
     return `Дорогая ${name}!`;
   }
@@ -47,12 +47,14 @@ function getDearGreeting(guest) {
   return `Дорогой(ая) ${name}!`;
 }
 
+
 function applyPersonalization() {
   const guest = getGuestFromUrl();
   if (!guest) return null;
 
   const { name, count } = guest;
-  const dear = getDearGreeting(name);
+  // ИСПРАВЛЕНО: Передаем в функцию весь объект guest, а не только имя
+  const dear = getDearGreeting(guest);
 
   document.title = `${name} — приглашение на свадьбу`;
 
