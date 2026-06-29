@@ -129,7 +129,7 @@ a:hover {
   text-align: center;
   background:
     linear-gradient(135deg, rgba(92, 74, 58, 0.45) 0%, rgba(139, 158, 126, 0.35) 100%),
-    url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80') center/cover no-repeat;
+    url(./image/Фон.jpg) center/cover no-repeat;
   color: var(--white);
   overflow: hidden;
 }
