@@ -18,4 +18,6 @@ const GUEST_LIST = {
   skorohodovy: { name: 'Илья и Елизавета', count: 2 },
   elima: { name: 'Элима', count: 1, gender: 'female' },
   iman: { name: 'Иман', count: 1, gender: 'female' },
+  lubov: { name: 'Алексей и Любовь', count: 2 },
+  borisova: { name: 'Иван и Дарья', count: 2 },
 };
